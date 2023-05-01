@@ -1,8 +1,8 @@
 # Frontend Mentor - Order summary card solution
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click Here]([https://your-solution-url.com](https://github.com/clinto-bean/ordersummary))
+- Live Site URL: [Click Here]([https://your-live-site-url.com](https://clinto-bean.github.io/ordersummary))
 
 ## My process
 
