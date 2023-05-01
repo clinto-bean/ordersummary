@@ -1,0 +1,207 @@
+/* Style Guide Declarations */
+
+/*  
+    Mobile Dimensions used: 375x812
+    Desktop Dimensions used: 1920x1080
+*/
+
+:root {
+  --clr-primary-100: hsl(225, 100%, 94%);
+  --clr-primary-300: hsl(245, 75%, 52%);
+  --clr-neutral-100: hsl(225, 100%, 98%);
+  --clr-neutral-300: hsl(224, 23%, 55%);
+  --clr-neutral-500: hsl(223, 47%, 23%);
+  font-size: 16px;
+}
+
+/* General Styling */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: url("./assets/images/pattern-background-mobile.svg");
+  background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-500);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Container */
+
+.container {
+    margin: 4rem 1.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background: white;
+  }
+
+/* Card & Card Sections */
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-head {
+  overflow: hidden;
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+}
+
+.card-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.summary {
+    font-weight: 900;
+    margin: 1.5rem 1rem;
+}
+
+.subtitle {
+    max-width: 25rem;
+    line-height: 1.5rem;
+    color: var(--clr-neutral-300);
+    font-weight: 500;
+    margin: 0 2rem 1.5rem;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.plan {
+  font-size: 0.75rem;
+  display: grid;
+  grid-template-columns: 4;
+  grid-template-areas: "music plan plan change";
+  padding: 1rem;
+  background-color: var(--clr-neutral-100);
+  border-radius: 1rem;
+  margin: 1.5rem;
+}
+
+.cost {
+    color: var(--clr-neutral-300);
+}
+
+.change {
+  grid-area: change;
+  font-weight: 700;
+}
+
+.change:hover {
+    color: var(--clr-neutral-300);
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.current-plan {
+  font-size: 0.875rem;
+  grid-area: plan;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+/* Buttons */
+
+.payment {
+  font-weight: bold;
+  color: white;
+  background-color: hsl(245, 75%, 52%);
+  padding: 1rem 2rem;
+  margin: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 1rem 1rem var(--clr-primary-100);
+  text-shadow: 0px 1rem 1rem hsla(225, 100%, 98%, 0.4);
+  width: 87.5%;
+  transition: background-color 0s linear;
+}
+
+.payment:hover, .payment:active {
+    background-color: hsla(245, 75%, 52%, 0.8)
+}
+
+.cancel {
+  background-color: transparent;
+  text-align: center;
+  padding: 0.5rem 1.5rem 2rem;
+  color: var(--clr-neutral-300);
+  font-weight: 900;
+  max-width: fit-content;
+  transition: color 0.25s ease-in-out;
+}
+
+.cancel:hover, .cancel:active {
+    color: var(--clr-neutral-500);
+}
+
+/* Footer Styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Container Queries */
+@media (min-width: 500px){
+    body {
+        background-image: url("/assets/images/pattern-background-desktop.svg");
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        align-content: center;
+        max-width: fit-content;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+    }
+    .plan {
+        width: 80%;
+    }
+
+    .card-footer {
+        width: 100%;
+    }
+    
+}
